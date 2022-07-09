@@ -7,4 +7,6 @@
 
 void handshake_init();
 
+void set_voltage(uint8_t voltage);
+
 #endif

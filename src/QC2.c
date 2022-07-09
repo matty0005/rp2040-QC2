@@ -31,7 +31,7 @@ void handshake_init() {
 void set_voltage(uint8_t voltage) {
 
     if (!handshake_complete) {
-        handshake_init()
+        handshake_init();
     }
 
     switch (voltage) {
@@ -44,6 +44,7 @@ void set_voltage(uint8_t voltage) {
 
         case QC_9V:
             gpio_set_dir(DATA_PLUS, GPIO_OUT);
+            gpio_put(DATA_PLUS, 1);
 
             gpio_set_dir(DATA_MINUS, GPIO_OUT);
             gpio_put(DATA_MINUS, 1);
