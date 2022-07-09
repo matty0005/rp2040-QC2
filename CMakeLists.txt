@@ -18,3 +18,5 @@ pico_add_extra_outputs(rp2040-QC2)
 #Enable USB serial 
 pico_enable_stdio_usb(rp2040-QC2 1)
 pico_enable_stdio_uart(rp2040-QC2 0)
+
+add_subdirectory("src")
